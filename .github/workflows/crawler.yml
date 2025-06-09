@@ -2,7 +2,7 @@ name: Hot News Crawler
 
 on:
   schedule:
-    - cron: '*/90 * * * *'  # 每90分钟运行一次
+    - cron:  '0 */2 * * *'   #  每 2 小时的 0 分钟执行一次
   workflow_dispatch:
 
 # 添加权限设置
