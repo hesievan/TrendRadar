@@ -1242,7 +1242,7 @@ class NewsAnalyzer:
             ("cls-hot", "财联社热门"),
             ("ifeng", "凤凰网"),
             "tieba",
-            "_36kr",
+            "36kr",
             "sputniknewscn",
             "zaobao",
             "cankaoxiaoxi",
