@@ -1242,9 +1242,15 @@ class NewsAnalyzer:
             ("cls-hot", "财联社热门"),
             ("ifeng", "凤凰网"),
             "tieba",
+            "_36kr",
+            "sputniknewscn",
+            "zaobao",
+            "cankaoxiaoxi",
+            "jin10",
             "weibo",
             "douyin",
             "zhihu",
+            "gelonghui",
         ]
 
         print(f"开始爬取数据，请求间隔设置为 {self.request_interval} 毫秒")
