@@ -1248,7 +1248,6 @@ class NewsAnalyzer:
             "jin10",
             "github",
             "weibo",
-            "_36kr",
             "douyin",
             "zhihu",
             "xueqiu",
