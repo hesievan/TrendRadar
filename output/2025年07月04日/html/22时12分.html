@@ -1,0 +1,114 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>频率词统计报告</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                h1, h2 { color: #333; }
+                table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                th { background-color: #f2f2f2; }
+                tr:nth-child(even) { background-color: #f9f9f9; }
+                .word { font-weight: bold; }
+                .count { text-align: center; }
+                .percentage { text-align: center; }
+                .titles { max-width: 500px; }
+                .source { color: #666; font-style: italic; }
+                .error { color: #d9534f; }
+                .news-link { 
+                    color: #007bff; 
+                    text-decoration: none; 
+                    border-bottom: 1px dotted #007bff;
+                }
+                .news-link:hover { 
+                    color: #0056b3; 
+                    text-decoration: underline; 
+                }
+                .news-link:visited { 
+                    color: #6f42c1; 
+                }
+                .no-link { 
+                    color: #333; 
+                }
+                .new-title {
+                    background-color: #fff3cd;
+                    border: 1px solid #ffc107;
+                    border-radius: 3px;
+                    padding: 2px 6px;
+                    margin: 2px 0;
+                }
+                .new-section {
+                    background-color: #d1ecf1;
+                    border: 1px solid #bee5eb;
+                    border-radius: 5px;
+                    padding: 10px;
+                    margin-top: 10px;
+                }
+                .new-section h3 {
+                    color: #0c5460;
+                    margin-top: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>频率词统计报告</h1>
+        <p>总标题数: 255</p><p>生成时间: 2025-07-04 22:12:06</p>
+            <table>
+                <tr>
+                    <th>排名</th>
+                    <th>频率词</th>
+                    <th>出现次数</th>
+                    <th>占比</th>
+                    <th>相关标题</th>
+                </tr>
+        
+                <tr>
+                    <td>1</td>
+                    <td class="word">指数 股市 股票 A股 股价 港股 异动 研报 领涨 涨停 跌停</td>
+                    <td class="count">5</td>
+                    <td class="percentage">1.96%</td>
+                    <td class="titles">[财联社热门] <a href="https://www.cls.cn/detail/2076063" target="_blank" class="news-link">外资也爱A股ETF，个别产品高调买成第一大持有人，释放什么信号？</a> <font color='red'><strong>[4]</strong></font> <font color='grey'>- 22时12分</font><br>[财联社热门] <a href="https://www.cls.cn/detail/2076466" target="_blank" class="news-link">【焦点复盘】沪指冲高回落一度逼近3500点，电力、创新药板块全天强势，多只高位人气股遭遇跌停</a> [9] <font color='grey'>- 22时12分</font><br>[bilibili 热搜] <a href="https://search.bilibili.com/all?keyword=A%E8%82%A1%20%E5%8F%88%E6%98%AF%E5%9D%90%E8%BF%87%E5%B1%B1%E8%BD%A6%E7%9A%84%E4%B8%80%E5%A4%A9" target="_blank" class="news-link">A股 又是坐过山车的一天</a> [15] <font color='grey'>- 22时12分</font><br><div class='new-title'>🆕 [今日头条] <a href="https://www.toutiao.com/trending/7523150717473787434/" target="_blank" class="news-link">业内：A股冲高受阻难改中期扬升趋势</a> [26] <font color='grey'>- 22时12分</font></div><br>[今日头条] <a href="https://www.toutiao.com/trending/7523121542436228647/" target="_blank" class="news-link">上证指数下周能突破3500点吗</a> [29] <font color='grey'>- 22时12分</font></td>
+                </tr>
+            
+                <tr>
+                    <td>2</td>
+                    <td class="word">AI 大模型 人工智能 DeepSeek 梁文锋</td>
+                    <td class="count">4</td>
+                    <td class="percentage">1.57%</td>
+                    <td class="titles">[zhihu] <a href="https://www.zhihu.com/question/1923049081044960601" target="_blank" class="news-link">为什么 deepseek 深度思考过程中总要先「嗯」一声？</a> <font color='red'><strong>[2]</strong></font> <font color='grey'>- 22时12分</font><br>[zhihu] <a href="https://www.zhihu.com/question/1924254207063593527" target="_blank" class="news-link">如何评价 HonestAGI 有关于盘古开源大模型的参数权重「强相关」于 Qwen2.5 大模型的技术报告？</a> [13] <font color='grey'>- 22时12分</font><br><div class='new-title'>🆕 [weibo] <a href="https://m.weibo.cn/search?containerid=231522type%3D1%26q%3D%23GAI%E6%98%AF%E4%B8%8D%E6%98%AF%E5%8F%88%E6%83%B3%E8%B5%B0%E4%BA%86%23&amp;_T_WM=16922097837&amp;v_p=42" target="_blank" class="news-link">GAI是不是又想走了</a> [21] <font color='grey'>- 22时12分</font></div><br>[weibo] <a href="https://m.weibo.cn/search?containerid=231522type%3D1%26q%3D%23DeepSeek%E7%BB%99%E7%8E%8B%E4%B8%80%E5%8D%9A%E9%81%93%E6%AD%89%E6%98%AF%E5%81%87%E7%9A%84%23&amp;_T_WM=16922097837&amp;v_p=42" target="_blank" class="news-link">DeepSeek给王一博道歉是假的</a> [26] <font color='grey'>- 22时12分</font></td>
+                </tr>
+            
+                <tr>
+                    <td>3</td>
+                    <td class="word">成都</td>
+                    <td class="count">3</td>
+                    <td class="percentage">1.18%</td>
+                    <td class="titles">[今日头条] <a href="https://www.toutiao.com/trending/7522789546146005055/" target="_blank" class="news-link">成都的粉色天空有多美</a> [7] <font color='grey'>- 22时12分</font><br><div class='new-title'>🆕 [百度热搜] <a href="https://www.baidu.com/s?wd=%E6%88%90%E9%83%BD%E6%9A%B4%E9%9B%A8%E5%AE%B6%E4%B8%AD%E6%8F%92%E5%BA%A7%E5%87%BA%E6%B0%B4%E6%88%90%E7%80%91%E5%B8%83" target="_blank" class="news-link">成都暴雨家中插座出水成瀑布</a> [14] <font color='grey'>- 22时12分</font></div><br><div class='new-title'>🆕 [今日头条] <a href="https://www.toutiao.com/trending/7522880390085083146/" target="_blank" class="news-link">成都暴雨二仙桥一片汪洋</a> [19] <font color='grey'>- 22时12分</font></div></td>
+                </tr>
+            
+                <tr>
+                    <td>4</td>
+                    <td class="word">食品 安全 食品安全 添加剂</td>
+                    <td class="count">1</td>
+                    <td class="percentage">0.39%</td>
+                    <td class="titles">[澎湃新闻] <a href="https://m.thepaper.cn/newsDetail_forward_31097024" target="_blank" class="news-link">三色“交通安全码”关联从业资格，上海的快递外卖骑手感受如何</a> <font color='red'><strong>[2]</strong></font> <font color='grey'>- 22时12分</font></td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td class="word">大摩 花旗 美联储 证券 高盛 摩根士丹利 瑞银 汇丰</td>
+                    <td class="count">1</td>
+                    <td class="percentage">0.39%</td>
+                    <td class="titles"><div class='new-title'>🆕 [华尔街见闻] <a href="https://wallstreetcn.com/articles/3750387" target="_blank" class="news-link">“新美联储通讯社”：6月非农就业报告可能延长美联储观望期</a> [10] <font color='grey'>- 22时12分</font></div></td>
+                </tr>
+            
+            </table>
+        
+            <div class="new-section">
+                <h3>🆕 本次新增热点新闻 (共 5 条)</h3>
+            <h4>今日头条 (2 条)</h4><ul><li><a href="https://www.toutiao.com/trending/7522880390085083146/" target="_blank" class="news-link">成都暴雨二仙桥一片汪洋</a> [19]</li><li><a href="https://www.toutiao.com/trending/7523150717473787434/" target="_blank" class="news-link">业内：A股冲高受阻难改中期扬升趋势</a> [26]</li></ul><h4>百度热搜 (1 条)</h4><ul><li><a href="https://www.baidu.com/s?wd=%E6%88%90%E9%83%BD%E6%9A%B4%E9%9B%A8%E5%AE%B6%E4%B8%AD%E6%8F%92%E5%BA%A7%E5%87%BA%E6%B0%B4%E6%88%90%E7%80%91%E5%B8%83" target="_blank" class="news-link">成都暴雨家中插座出水成瀑布</a> [14]</li></ul><h4>华尔街见闻 (1 条)</h4><ul><li><a href="https://wallstreetcn.com/articles/3750387" target="_blank" class="news-link">“新美联储通讯社”：6月非农就业报告可能延长美联储观望期</a> [10]</li></ul><h4>weibo (1 条)</h4><ul><li><a href="https://m.weibo.cn/search?containerid=231522type%3D1%26q%3D%23GAI%E6%98%AF%E4%B8%8D%E6%98%AF%E5%8F%88%E6%83%B3%E8%B5%B0%E4%BA%86%23&amp;_T_WM=16922097837&amp;v_p=42" target="_blank" class="news-link">GAI是不是又想走了</a> [21]</li></ul></div>
+        </body>
+        </html>
+        
