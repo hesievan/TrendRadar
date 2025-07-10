@@ -42,8 +42,8 @@ CONFIG = {
     "TELEGRAM_CHAT_ID": "",
     # 用于让关注度更高的新闻在更前面显示，这里是权重排序配置，合起来是 1 就行
     "WEIGHT_CONFIG": {
-        "RANK_WEIGHT": 0.6，  # 排名
-        "FREQUENCY_WEIGHT": 0.3，  # 频次
+        "RANK_WEIGHT": 0.6，   # 排名
+        "FREQUENCY_WEIGHT": 0.3，   # 频次
         "HOTNESS_WEIGHT": 0.1,  # 热度
     },
 }
