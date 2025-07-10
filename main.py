@@ -44,7 +44,7 @@ CONFIG = {
     "WEIGHT_CONFIG": {
         "RANK_WEIGHT": 0.6，   # 排名
         "FREQUENCY_WEIGHT": 0.3，   # 频次
-        "HOTNESS_WEIGHT": 0.1,  # 热度
+        "HOTNESS_WEIGHT": 0.1，  # 热度
     },
 }
 
