@@ -19,13 +19,13 @@ CONFIG = {
     "SHOW_VERSION_UPDATE": True,  # 控制显示版本更新提示，改成 False 将不接受新版本提示
     "FEISHU_MESSAGE_SEPARATOR": "━━━━━━━━━━━━━━━━━━━",  # feishu消息分割线
     "REQUEST_INTERVAL": 1000,  # 请求间隔(毫秒)
-    "REPORT_TYPE": "daily",  # 报告类型: "current"|"daily"|"both"
+    "REPORT_TYPE": "current",  # 报告类型: "current"|"daily"|"both"
     "RANK_THRESHOLD": 5,  # 排名高亮阈值
     "USE_PROXY": True,  # 是否启用代理
     "DEFAULT_PROXY": "http://127.0.0.1:10086",
     "ENABLE_CRAWLER": True,  # 是否启用爬取新闻功能，False时直接停止程序
     "ENABLE_NOTIFICATION": True,  # 是否启用通知功能，False时不发送手机通知
-    "FOCUS_NEW_ONLY": False,  # 是否只关注新增新闻，True时只统计和推送新增的新闻(增量推送)
+    "FOCUS_NEW_ONLY": True,  # 是否只关注新增新闻，True时只统计和推送新增的新闻(增量推送)
     # FOCUS_NEW_ONLY 增量推送开关：避免重复推送相同内容，只在有新内容时才发通知
     # 优点：1.减少重复推送噪音 2.专注最新动态 3.避免通知疲劳
     # 适用场景：1.高频监控(≤30分钟间隔) 2.实时热点追踪 3.只关心新话题而非持续热度
@@ -42,8 +42,8 @@ CONFIG = {
     "TELEGRAM_CHAT_ID": "",
     # 用于让关注度更高的新闻在更前面显示，这里是权重排序配置，合起来是 1 就行
     "WEIGHT_CONFIG": {
-        "RANK_WEIGHT": 0.6,  # 排名
-        "FREQUENCY_WEIGHT": 0.3,  # 频次
+        "RANK_WEIGHT": 0.5，  # 排名
+        "FREQUENCY_WEIGHT": 0.4，  # 频次
         "HOTNESS_WEIGHT": 0.1,  # 热度
     },
 }
