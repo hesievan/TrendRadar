@@ -1,0 +1,111 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>频率词统计报告</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                h1, h2 { color: #333; }
+                table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+                th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                th { background-color: #f2f2f2; }
+                tr:nth-child(even) { background-color: #f9f9f9; }
+                .word { font-weight: bold; }
+                .count { text-align: center; }
+                .percentage { text-align: center; }
+                .titles { max-width: 500px; }
+                .source { color: #666; font-style: italic; }
+                .error { color: #d9534f; }
+                .news-link { 
+                    color: #007bff; 
+                    text-decoration: none; 
+                    border-bottom: 1px dotted #007bff;
+                }
+                .news-link:hover { 
+                    color: #0056b3; 
+                    text-decoration: underline; 
+                }
+                .news-link:visited { 
+                    color: #6f42c1; 
+                }
+                .no-link { 
+                    color: #333; 
+                }
+                .new-title {
+                    background-color: #fff3cd;
+                    border: 1px solid #ffc107;
+                    border-radius: 3px;
+                    padding: 2px 6px;
+                    margin: 2px 0;
+                }
+                .new-section {
+                    background-color: #d1ecf1;
+                    border: 1px solid #bee5eb;
+                    border-radius: 5px;
+                    padding: 10px;
+                    margin-top: 10px;
+                }
+                .new-section h3 {
+                    color: #0c5460;
+                    margin-top: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>频率词统计报告</h1>
+        <p>报告类型: 实时分析</p><p>总标题数: 60</p><p>生成时间: 2025-07-21 15:49:44</p>
+            <table>
+                <tr>
+                    <th>排名</th>
+                    <th>频率词</th>
+                    <th>出现次数</th>
+                    <th>占比</th>
+                    <th>相关标题</th>
+                </tr>
+        
+                <tr>
+                    <td>1</td>
+                    <td class="word">指数 股市 股票 A股 股价 港股 异动</td>
+                    <td class="count">12</td>
+                    <td class="percentage">20.0%</td>
+                    <td class="titles"><div class='new-title'>🆕 [格隆汇] <a href="https://www.gelonghui.com/news/5040456" target="_blank" class="news-link">港股异动丨宏信建发盈警后大跌逾17% 股价创近3个月新低</a> <font color='red'><strong>[1]</strong></font> <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [fastbull] <a href="https://www.fastbull.com/cn/fastshort/3561087_100_1" target="_blank" class="news-link">德意志银行将欧洲股市相对于美国股市的评级从增持下调至中性。</a> <font color='red'><strong>[2 - 22]</strong></font> <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [fastbull] <a href="https://www.fastbull.com/cn/fastshort/3561058_100_1" target="_blank" class="news-link">【行情】法国CAC40指数上涨0.01%，西班牙IBEX指数上涨0.08%。</a> <font color='red'><strong>[3 - 23]</strong></font> <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [fastbull] <a href="https://www.fastbull.com/cn/fastshort/3561057_100_1" target="_blank" class="news-link">【行情】欧洲斯托克指数上涨0.01%，欧元区蓝筹股指数下跌0.05%。</a> <font color='red'><strong>[4 - 24]</strong></font> <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [fastbull] <a href="https://www.fastbull.com/cn/fastshort/3561056_100_1" target="_blank" class="news-link">【行情】英国富时100指数上涨0.03%，德国DAX30指数上涨0.09%。</a> <font color='red'><strong>[5 - 25]</strong></font> <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250721151506059800" target="_blank" class="news-link">金十图示：2025年07月21日（周一）全球股市指数-欧洲市场（盘初）</a> [7] <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [fastbull] <a href="https://www.fastbull.com/cn/fastshort/3561055_100_1" target="_blank" class="news-link">【行情】欧洲斯托克600指数上涨0.05%。</a> [6 - 26] <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250721151449927800" target="_blank" class="news-link">金十数据整理：A股每日市场要闻回顾（2025-07-21）</a> [9] <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250721151127570800" target="_blank" class="news-link">金十图示：2025年07月21日（周一）投机情绪指数</a> [10] <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [财联社热门] <a href="https://www.cls.cn/detail/2091088" target="_blank" class="news-link">A股新纪录！牛股20cm涨停“涨不停”，9个交易日涨超4倍</a> [11] <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250721151041099800" target="_blank" class="news-link">股市资金流向图：今日沪深两市主力资金净流出106.59亿元，占比0.63%；大单资金净流出122.18亿元，占比0.72%；小单资金净流入167.47亿元，占比0.99%。</a> [11] <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250721150552673800" target="_blank" class="news-link">金十图示：2025年07月21日（周一）富时中国A50指数期货技术面一览（5小时图）</a> [13] <font color='grey'>- 15时49分</font></div></td>
+                </tr>
+            
+                <tr>
+                    <td>2</td>
+                    <td class="word">中美谈判 中国 美国 日本 韩国</td>
+                    <td class="count">5</td>
+                    <td class="percentage">8.33%</td>
+                    <td class="titles"><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250721153849966800" target="_blank" class="news-link">荷兰国际：日本参议院选举结果加剧日元的不确定性</a> <font color='red'><strong>[1]</strong></font> <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [今日头条] <a href="https://www.toutiao.com/trending/7529012146924486699/" target="_blank" class="news-link">美国富国银行高管涉刑案被禁止离华</a> <font color='red'><strong>[2]</strong></font> <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250721153633649800" target="_blank" class="news-link">机构：日本首相石破茂再表态将留任 政治不确定性有所缓解</a> <font color='red'><strong>[2]</strong></font> <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [今日头条] <a href="https://www.toutiao.com/trending/7529315058627644982/" target="_blank" class="news-link">英伟达H20重返中国的正反面</a> [26] <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [今日头条] <a href="https://www.toutiao.com/trending/7529415918917602866/" target="_blank" class="news-link">黄仁勋说中国自动驾驶发展全球最快</a> [29] <font color='grey'>- 15时49分</font></div></td>
+                </tr>
+            
+                <tr>
+                    <td>3</td>
+                    <td class="word">研报 领涨 涨停 跌停 新股 申购</td>
+                    <td class="count">2</td>
+                    <td class="percentage">3.33%</td>
+                    <td class="titles"><div class='new-title'>🆕 [格隆汇] <a href="https://www.gelonghui.com/news/5040450" target="_blank" class="news-link">研报掘金丨东北证券：维持瑞芯微“买入”评级，有望持续受益端侧AI落地产品持续放量</a> [7] <font color='grey'>- 15时49分</font></div><br><div class='new-title'>🆕 [格隆汇] <a href="https://www.gelonghui.com/news/5040446" target="_blank" class="news-link">研报掘金丨国投证券：宝信软件积极打造新增长极，维持“买入-A”评级</a> [11] <font color='grey'>- 15时49分</font></div></td>
+                </tr>
+            
+                <tr>
+                    <td>4</td>
+                    <td class="word">大摩 花旗 美联储 证券 高盛 摩根士丹利 瑞银 汇丰</td>
+                    <td class="count">1</td>
+                    <td class="percentage">1.67%</td>
+                    <td class="titles"><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250721151500961800" target="_blank" class="news-link">机构：美元走势疲软 关税大限与美联储独立性担忧双重施压</a> [8] <font color='grey'>- 15时49分</font></div></td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td class="word">成都</td>
+                    <td class="count">1</td>
+                    <td class="percentage">1.67%</td>
+                    <td class="titles"><div class='new-title'>🆕 [今日头条] <a href="https://www.toutiao.com/trending/7528964530395807782/" target="_blank" class="news-link">成都将分批取消住房限售</a> [6] <font color='grey'>- 15时49分</font></div></td>
+                </tr>
+            
+            </table>
+        
+        </body>
+        </html>
+        
