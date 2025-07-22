@@ -78,4 +78,7 @@ platforms:
     name: "雪球"
   - id: "jin10"
     name: "金10"
-    
+  - id: "zaobao"
+    name: "早报"
+  - id: "solidot"
+    name: "奇讯"
