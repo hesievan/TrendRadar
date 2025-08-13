@@ -1,0 +1,87 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>频率词统计报告</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1, h2 { color: #333; }
+            table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            tr:nth-child(even) { background-color: #f9f9f9; }
+            .word { font-weight: bold; }
+            .count { text-align: center; }
+            .percentage { text-align: center; }
+            .titles { max-width: 500px; }
+            .source { color: #666; font-style: italic; }
+            .error { color: #d9534f; }
+            .news-link { 
+                color: #007bff; 
+                text-decoration: none; 
+                border-bottom: 1px dotted #007bff;
+            }
+            .news-link:hover { 
+                color: #0056b3; 
+                text-decoration: underline; 
+            }
+            .news-link:visited { 
+                color: #6f42c1; 
+            }
+            .no-link { 
+                color: #333; 
+            }
+            .new-title {
+                background-color: #fff3cd;
+                border: 1px solid #ffc107;
+                border-radius: 3px;
+                padding: 2px 6px;
+                margin: 2px 0;
+            }
+            .new-section {
+                background-color: #d1ecf1;
+                border: 1px solid #bee5eb;
+                border-radius: 5px;
+                padding: 10px;
+                margin-top: 10px;
+            }
+            .new-section h3 {
+                color: #0c5460;
+                margin-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>频率词统计报告</h1>
+    <p>报告类型: 实时分析</p><p>总标题数: 50</p><p>生成时间: 2025-08-14 02:28:28</p>
+        <table>
+            <tr>
+                <th>排名</th>
+                <th>频率词</th>
+                <th>出现次数</th>
+                <th>占比</th>
+                <th>相关标题</th>
+            </tr>
+    
+            <tr>
+                <td>1</td>
+                <td class="word">大摩 花旗 美联储 证券 高盛 摩根士丹利 瑞银 汇丰</td>
+                <td class="count">13</td>
+                <td class="percentage">26.0%</td>
+                <td class="titles"><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250814020255775800" target="_blank" class="news-link">美联储博斯蒂克：关税可能导致结构性变化。</a> <font color='red'><strong>[1]</strong></font> <font color='grey'>- 02时28分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250814020234516800" target="_blank" class="news-link">美联储博斯蒂克：由于劳动力市场依然强劲，我们今天有足够的时间等待政策调整。</a> <font color='red'><strong>[2]</strong></font> <font color='grey'>- 02时28分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250814015848917800" target="_blank" class="news-link">美联储古尔斯比：劳动力市场存在一些警告信号，也需要密切关注。</a> <font color='red'><strong>[3]</strong></font> <font color='grey'>- 02时28分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250814015833493800" target="_blank" class="news-link">美联储古尔斯比：如果通胀方向错误，美联储将不得不采取行动。</a> <font color='red'><strong>[4]</strong></font> <font color='grey'>- 02时28分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250814015407016800" target="_blank" class="news-link">美联储古尔斯比：抵押贷款的主要决定因素是长期利率，这在一定程度上反映了长期通胀预期。</a> <font color='red'><strong>[5]</strong></font> <font color='grey'>- 02时28分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250814013941190800" target="_blank" class="news-link">美联储古尔斯比：关税的危险之处在于它们会降低生产率增长。</a> [7] <font color='grey'>- 02时28分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250814013650925800" target="_blank" class="news-link">美联储古尔斯比：劳动力市场相当稳固。</a> [8] <font color='grey'>- 02时28分</font></div><br><div class='new-title'>🆕 [fastbull] <a href="https://www.fastbull.com/cn/fastshort/3612048_100_1" target="_blank" class="news-link">美国芝加哥联储主席古尔斯比：如果通胀出现负面变化，美联储就必须采取行动。</a> [8 - 28] <font color='grey'>- 02时28分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250814013416249800" target="_blank" class="news-link">美联储古尔斯比：就业增长放缓可能只是人口增长放缓的信号。</a> [9] <font color='grey'>- 02时28分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250814013403406800" target="_blank" class="news-link">美联储古尔斯比：就业增长大幅下修可能反映出移民过渡期。</a> [10] <font color='grey'>- 02时28分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250814013345871800" target="_blank" class="news-link">美联储古尔斯比：在下次美联储会议前仍有通胀数据待公布。</a> [11] <font color='grey'>- 02时28分</font></div><br><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250814013324943800" target="_blank" class="news-link">美联储古尔斯比：我不喜欢提前确定利率。</a> [12] <font color='grey'>- 02时28分</font></div><br><div class='new-title'>🆕 [fastbull] <a href="https://www.fastbull.com/cn/fastshort/3612035_100_1" target="_blank" class="news-link">美联储8月13日隔夜逆回购交易规模为100万美元。</a> [14] <font color='grey'>- 02时28分</font></div></td>
+            </tr>
+        
+            <tr>
+                <td>2</td>
+                <td class="word">大模型 人工智能 DeepSeek</td>
+                <td class="count">2</td>
+                <td class="percentage">4.0%</td>
+                <td class="titles"><div class='new-title'>🆕 [金10] <a href="https://flash.jin10.com/detail/20250814014143208800" target="_blank" class="news-link">美联储古尔斯比：对经济融入人工智能的能力持乐观态度。</a> [6] <font color='grey'>- 02时28分</font></div><br><div class='new-title'>🆕 [fastbull] <a href="https://www.fastbull.com/cn/fastshort/3612033_100_1" target="_blank" class="news-link">美国芝加哥联储主席古尔斯比：对经济融入人工智能的能力感到乐观。</a> [16] <font color='grey'>- 02时28分</font></div></td>
+            </tr>
+        
+        </table>
+    
+    </body>
+    </html>
+    
