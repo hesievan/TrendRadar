@@ -181,7 +181,7 @@ def load_config():
         from_source = "环境变量" if os.environ.get("EMAIL_FROM") else "配置文件"
         notification_sources.append(f"邮件({from_source})")
 
-    if config["NTFY_SERVER_URL"] 和 config["NTFY_TOPIC"]:
+    if config["NTFY_SERVER_URL"] and config["NTFY_TOPIC"]:
         server_source = "环境变量" if os.environ.get("NTFY_SERVER_URL") else "配置文件"
         notification_sources.append(f"ntfy({server_source})")
 
