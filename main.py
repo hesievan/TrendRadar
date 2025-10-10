@@ -207,20 +207,20 @@ def get_beijing_time():
 
 def format_date_folder():
     """格式化日期文件夹"""
-    return get_beijing_time()。strftime("%Y年%m月%d日")
+    return get_beijing_time().strftime("%Y年%m月%d日")
 
 
 def format_time_filename():
     """格式化时间文件名"""
-    return get_beijing_time()。strftime("%H时%M分")
+    return get_beijing_time().strftime("%H时%M分")
 
 
 def clean_title(title: str) -> str:
     """清理标题中的特殊字符"""
     if not isinstance(title, str):
         title = str(title)
-    cleaned_title = title.替换("\n"， " ").替换("\r", " ")
-    cleaned_title = re.sub(r"\s+"， " ", cleaned_title)
+    cleaned_title = title.replace("\n", " ").replace("\r", " ")
+    cleaned_title = re.sub(r"\s+", " ", cleaned_title)
     cleaned_title = cleaned_title.strip()
     return cleaned_title
 
@@ -394,7 +394,7 @@ class DataFetcher:
         self,
         id_info: Union[str, Tuple[str, str]],
         max_retries: int = 2,
-        min_retry_wait: int = 3，
+        min_retry_wait: int = 3,
         max_retry_wait: int = 5,
     ) -> Tuple[Optional[str], str, str]:
         """获取指定ID数据，支持重试"""
@@ -406,7 +406,7 @@ class DataFetcher:
 
         url = f"https://newsnow.busiyi.world/api/s?id={id_value}&latest"
 
-        proxies = 无
+        proxies = None
         if self.proxy_url:
             proxies = {"http": self.proxy_url, "https": self.proxy_url}
 
@@ -430,7 +430,7 @@ class DataFetcher:
                 data_json = json.loads(data_text)
 
                 status = data_json.get("status", "未知")
-                if status not 在 ["success"， "cache"]:
+                if status not in ["success", "cache"]:
                     raise ValueError(f"响应状态异常: {status}")
 
                 status_info = "最新数据" if status == "success" else "缓存数据"
@@ -775,7 +775,7 @@ def process_source_data(
                 existing_data = all_results[source_id][title]
                 existing_ranks = existing_data.get("ranks", [])
                 existing_url = existing_data.get("url", "")
-                existing_mobile_url = existing_data.get("mobileUrl"， "")
+                existing_mobile_url = existing_data.get("mobileUrl", "")
 
                 merged_ranks = existing_ranks.copy()
                 for rank in ranks:
@@ -784,14 +784,14 @@ def process_source_data(
 
                 all_results[source_id][title] = {
                     "ranks": merged_ranks,
-                    "url": existing_url 或 url,
-                    "mobileUrl": existing_mobile_url 或 mobile_url,
+                    "url": existing_url or url,
+                    "mobileUrl": existing_mobile_url or mobile_url,
                 }
 
                 title_info[source_id][title]["last_time"] = time_info
                 title_info[source_id][title]["ranks"] = merged_ranks
                 title_info[source_id][title]["count"] += 1
-                if not title_info[source_id][title]。get("url"):
+                if not title_info[source_id][title].get("url"):
                     title_info[source_id][title]["url"] = url
                 if not title_info[source_id][title].get("mobileUrl"):
                     title_info[source_id][title]["mobileUrl"] = mobile_url
@@ -805,7 +805,7 @@ def detect_latest_new_titles(current_platform_ids: Optional[List[str]] = None) -
     if not txt_dir.exists():
         return {}
 
-    files = sorted([f for f 在 txt_dir.iterdir() if f.suffix == ".txt"])
+    files = sorted([f for f in txt_dir.iterdir() if f.suffix == ".txt"])
     if len(files) < 2:
         return {}
 
@@ -816,8 +816,8 @@ def detect_latest_new_titles(current_platform_ids: Optional[List[str]] = None) -
     # 如果指定了当前平台列表，过滤最新文件数据
     if current_platform_ids is not None:
         filtered_latest_titles = {}
-        for source_id, title_data 在 latest_titles.items():
-            if source_id 在 current_platform_ids:
+        for source_id, title_data in latest_titles.items():
+            if source_id in current_platform_ids:
                 filtered_latest_titles[source_id] = title_data
         latest_titles = filtered_latest_titles
 
@@ -1016,12 +1016,12 @@ def count_word_frequency(
     elif mode == "current":
         # current 模式：只处理当前时间批次的新闻，但统计信息来自全部历史
         if title_info:
-            latest_time = 无
-            for source_titles 在 title_info.values():
+            latest_time = None
+            for source_titles in title_info.values():
                 for title_data in source_titles.values():
-                    last_time = title_data.get("last_time"， "")
+                    last_time = title_data.get("last_time", "")
                     if last_time:
-                        if latest_time is 无 or last_time > latest_time:
+                        if latest_time is None or last_time > latest_time:
                             latest_time = last_time
 
             # 只处理 last_time 等于最新时间的新闻
@@ -1031,7 +1031,7 @@ def count_word_frequency(
                     if source_id in title_info:
                         filtered_titles = {}
                         for title, title_data in source_titles.items():
-                            if title 在 title_info[source_id]:
+                            if title in title_info[source_id]:
                                 info = title_info[source_id][title]
                                 if info.get("last_time") == latest_time:
                                     filtered_titles[title] = title_data
@@ -1050,7 +1050,7 @@ def count_word_frequency(
         # 当日汇总模式：处理所有新闻
         results_to_process = results
         all_news_are_new = False
-        total_input_news = sum(len(titles) for titles 在 results.values())
+        total_input_news = sum(len(titles) for titles in results.values())
         filter_status = (
             "全部显示"
             if len(word_groups) == 1 and word_groups[0]["group_key"] == "全部新闻"
@@ -1070,12 +1070,12 @@ def count_word_frequency(
 
     for group in word_groups:
         group_key = group["group_key"]
-        word_stats[group_key] = {"count": 0， "titles": {}}
+        word_stats[group_key] = {"count": 0, "titles": {}}
 
-    for source_id, titles_data 在 results_to_process.items():
+    for source_id, titles_data in results_to_process.items():
         total_titles += len(titles_data)
 
-        if source_id not 在 processed_titles:
+        if source_id not in processed_titles:
             processed_titles[source_id] = {}
 
         for title, title_data in titles_data.items():
@@ -2643,7 +2643,7 @@ def render_feishu_content(
         text_content = f"📭 {mode_text}\n\n"
 
     if report_data["new_titles"]:
-        if text_content 和 "暂无匹配" not 在 text_content:
+        if text_content and "暂无匹配" not in text_content:
             text_content += f"\n{CONFIG['FEISHU_MESSAGE_SEPARATOR']}\n\n"
 
         text_content += (
@@ -2655,13 +2655,13 @@ def render_feishu_content(
                 f"**{source_data['source_name']}** ({len(source_data['titles'])} 条):\n"
             )
 
-            for j, title_data 在 enumerate(source_data["titles"]， 1):
+            for j, title_data in enumerate(source_data["titles"], 1):
                 title_data_copy = title_data.copy()
                 title_data_copy["is_new"] = False
                 formatted_title = format_title_for_platform(
                     "feishu", title_data_copy, show_source=False
                 )
-                text_content += f"  {j}。 {formatted_title}\n"
+                text_content += f"  {j}. {formatted_title}\n"
 
             text_content += "\n"
 
@@ -2673,7 +2673,7 @@ def render_feishu_content(
         for i, id_value in enumerate(report_data["failed_ids"], 1):
             text_content += f"  • <font color='red'>{id_value}</font>\n"
 
-    现在 = get_beijing_time()
+    now = get_beijing_time()
     text_content += (
         f"\n\n<font color='grey'>更新时间：{now.strftime('%Y-%m-%d %H:%M:%S')}</font>"
     )
@@ -2693,7 +2693,7 @@ def render_dingtalk_content(
     total_titles = sum(
         len(stat["titles"]) for stat in report_data["stats"] if stat["count"] > 0
     )
-    现在 = get_beijing_time()
+    now = get_beijing_time()
 
     text_content += f"**总新闻数：** {total_titles}\n\n"
     text_content += f"**时间：** {now.strftime('%Y-%m-%d %H:%M:%S')}\n\n"
@@ -3114,7 +3114,7 @@ def split_content_into_batches(
                 start_index = 1
 
             # 处理剩余新增新闻
-            for j 在 range(start_index, len(source_data["titles"])):
+            for j in range(start_index, len(source_data["titles"])):
                 title_data = source_data["titles"][j]
                 title_data_copy = title_data.copy()
                 title_data_copy["is_new"] = False
@@ -3221,7 +3221,7 @@ def send_to_notifications(
         time_range_end = CONFIG["SILENT_PUSH"]["TIME_RANGE"]["END"]
 
         if not push_manager.is_in_time_range(time_range_start, time_range_end):
-            现在 = get_beijing_time()
+            now = get_beijing_time()
             print(
                 f"静默模式：当前时间 {now.strftime('%H:%M')} 不在推送时间范围 {time_range_start}-{time_range_end} 内，跳过推送"
             )
