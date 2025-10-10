@@ -186,7 +186,7 @@ def load_config():
         notification_sources.append(f"ntfy({server_source})")
 
     if notification_sources:
-        print(f"通知渠道配置来源: {', '。join(notification_sources)}")
+        print(f"通知渠道配置来源: {', '.join(notification_sources)}")
     else:
         print("未配置任何通知渠道")
 
